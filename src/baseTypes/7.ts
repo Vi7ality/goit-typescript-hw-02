@@ -3,14 +3,16 @@
   і повертає boolean значення, що вказує, чи це день робочий чи вихідний.
 */
 
-enum Weekends {
-  SATURDAY,
-  SUNDAY
+enum WeekDay {
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+  Sunday
 }
 
-const isWeekend = (weekDay): boolean => {
-  if (weekDay === Weekends.weekDay) {
-    return true;
-  }
-  return false
-}
+const isWeekend = (weekDay: WeekDay): boolean => {
+  return weekDay === WeekDay.Saturday || weekDay === WeekDay.Sunday;
+};
